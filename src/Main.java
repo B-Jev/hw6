@@ -28,6 +28,18 @@ public class Main {
         }
     }
 
+    public static void deliveryDistance(int distance) {
+        if (distance <= 20) {
+            System.out.println("Потребуется дней: 1");
+        } else if (distance > 20 && distance <= 60) {
+            System.out.println("Потребуется дней: 2");
+        } else if (distance > 60 && distance <= 100) {
+            System.out.println("Потребуется дней: 3");
+        } else {
+            System.out.println("Доставки нет!");
+        }
+    }
+
 
     public static void main(String[] args) {
         task1();
@@ -51,18 +63,10 @@ public class Main {
 
     }
 
-    private static void task3() {
+    public static void task3() {
         System.out.println("Задача 3");
 
-        int deliveryDistance = 101;
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: 1");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            System.out.println("Потребуется дней: 2");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Потребуется дней: 3");
-        } else {
-            System.out.println("Доставки нет!");
-        }
+        int distance = 19;
+        deliveryDistance(distance);
     }
 }
